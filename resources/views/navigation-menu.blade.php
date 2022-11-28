@@ -1,23 +1,38 @@
 @php
     $nav_links_auth = [
         [
-            "name" => "Dashboard",
+            "name" => "Principal",
             "route" => route('dashboard'),
             "active" => request()->routeIs('dashboard')
         ],
         [
-            "name" => "Prueba",
-            "route" => "#",
-            "active" => false
+            "name" => "Seguros de vida",
+            "route" => route('user.vida'),
+            "active" => request()->routeIs('user.vida')
         ],
         [
-            "name" => "Prueba 2",
-            "route" => "#",
-            "active" => false
-        ]
+            "name" => "Seguros de vivienda",
+            "route" => route('user.vivienda'),
+            "active" => request()->routeIs('user.vivienda')
+        ],
+        [
+            "name" => "Seguros de vehiculos",
+            "route" => route('user.vehiculo'),
+            "active" => request()->routeIs('user.vehiculo')
+        ],
+        [
+            "name" => "Mis seguros",
+            "route" => route('user.mis_seguros'),
+            "active" => request()->routeIs('user.mis_seguros')
+        ],
     ];
 
     $nav_links = [
+        [
+            "name" => "Cotizar",
+            "route" => route('cotizar'),
+            "active" => request()->routeIs('cotizar')
+        ],
         [
             "name" => "Iniciar sesión",
             "route" => route('login'),
