@@ -9,13 +9,13 @@
                             @csrf
                             <x-contenedor_input class="mt-4">
                                 <x-jet-label for="num_personas" value="{{ __('Numero de personas, vehiculos o viviendas:') }}" />
-                                <x-jet-input id="num_personas" name="num_personas" type="number" class="form-control" required placeholder="Numero de personas, vehiculos o viviendas" value="1" />
+                                <x-jet-input id="num_personas" name="num_personas" :value="old('num_personas')" type="number" class="form-control" required placeholder="Numero de personas, vehiculos o viviendas" value="1" />
                                 <x-jet-input-error for="num_personas" class="mt-2" />
                             </x-contenedor_input>
 
                             <x-contenedor_input>
                                 <x-jet-label for="seguro" value="{{ __('Que tipo de seguro desea cotizar') }}" />
-                                <select id="seguro" name="seguro" class="form-select" required>
+                                <select id="seguro" name="seguro" :value="old('seguro')" class="form-select" required>
                                     <option value="vida">Seguro de vida</option>
                                     <option value="vivienda">Seguro de vivienda</option>
                                     <option value="vehiculo">Seguro de vehiculo</option>
@@ -25,7 +25,7 @@
 
                             <x-contenedor_input>
                                 <x-jet-label for="tipo_seguro" value="{{ __('Que tipo de seguro desea cotizar') }}" />
-                                <select id="tipo_seguro" name="tipo_seguro" class="form-select" required>
+                                <select id="tipo_seguro" name="tipo_seguro" :value="old('tipo_seguro')" class="form-select" required>
                                     <option value="basico">Básico</option>
                                     <option value="estandar">Estándar</option>
                                     <option value="premiun">Premiun</option>
@@ -35,13 +35,13 @@
 
                             <x-contenedor_input>
                                 <x-jet-label for="fecha_inicio" value="{{ __('Fecha de inicio:') }}" />
-                                <x-jet-input id="fecha_inicio" name="fecha_inicio" type="date" class="form-control" required />
+                                <x-jet-input id="fecha_inicio" name="fecha_inicio" :value="old('fecha_inicio')" type="date" class="form-control" required />
                                 <x-jet-input-error for="fecha_inicio" class="mt-2" />
                             </x-contenedor_input>
 
                             <x-contenedor_input>
                                 <x-jet-label for="fecha_fin" value="{{ __('Fecha de fin:') }}" />
-                                <x-jet-input id="fecha_fin" name="fecha_fin" type="date" class="form-control" required />
+                                <x-jet-input id="fecha_fin" name="fecha_fin" :value="old('fecha_fin')" type="date" class="form-control" required />
                                 <x-jet-input-error for="fecha_fin" class="mt-2" />
                             </x-contenedor_input>
                 
