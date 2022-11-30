@@ -21,6 +21,10 @@ Route::get('/cotizar', function () {
     return view('cotizar');
 })->name('cotizar');
 
+Route::get('/admin', function () {
+    return view('admin.principal');
+})->name('admin.principal');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

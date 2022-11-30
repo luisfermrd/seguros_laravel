@@ -132,7 +132,4 @@
         </x-card_seguros>
 
     </x-section_seguros>
-
-    <x-footer />
-
 </x-app-layout>
