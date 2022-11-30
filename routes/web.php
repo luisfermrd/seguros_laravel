@@ -49,4 +49,16 @@ Route::middleware([
     Route::get('/vivienda', function () {
         return view('user.vivienda');
     })->name('user.vivienda');
+    Route::get('/pagar', function () {
+        return view('user.pagar');
+    })->name('user.pagar');
+    Route::get('/detalles', function () {
+        return view('user.detalles');
+    })->name('user.detalles');
+    Route::get('/cancelar_seguro', function () {
+        return view('user.cancelar_seguro');
+    })->name('user.cancelar_seguro');
+    Route::get('/reclamar', function () {
+        return view('user.reclamar');
+    })->name('user.reclamar');
 });
