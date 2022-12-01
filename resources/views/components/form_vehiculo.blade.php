@@ -6,26 +6,25 @@
         <div class="container p-4">
             <form action="" method="post">
                 @csrf
-                <div class="form-group col-lg-4">
-                    <x-contenedor_input>
-                        <x-jet-label class="font-semibold" for="cumple_seguro" value="{{ __('Cuando le cumple el seguro?(*)') }}" />
-                        <select name="cumple_seguro" class="form-select" required>
-                            <option value="Enero">Enero</option>
-                            <option value="Febrero">Febrero</option>
-                            <option value="Marzo">Marzo</option>
-                            <option value="Abril">Abril</option>
-                            <option value="Mayo">Mayo</option>
-                            <option value="Junio">Junio</option>
-                            <option value="Julio">Julio</option>
-                            <option value="Agosto">Agosto</option>
-                            <option value="Septiembre">Septiembre</option>
-                            <option value="Octubre">Octubre</option>
-                            <option value="Noviembre">Noviembre</option>
-                            <option value="Diciembre">Diciembre</option>
-                        </select>
-                        <x-jet-input-error for="cumple_seguro" class="mt-2" />
-                    </x-contenedor_input>
-                </div>
+                <x-contenedor_input>
+                    <x-jet-label class="font-semibold" for="cumple_seguro" value="{{ __('Cuando le cumple el seguro?(*)') }}" />
+                    <select name="cumple_seguro" class="form-select" required>
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Mayo">Mayo</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Septiembre">Septiembre</option>
+                        <option value="Octubre">Octubre</option>
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Diciembre</option>
+                    </select>
+                    <x-jet-input-error for="cumple_seguro" class="mt-2" />
+                </x-contenedor_input>
+            
 
                 <x-contenedor_input>
                     <div class="form-group col-lg-12">
@@ -33,7 +32,7 @@
                     </div>
                 </x-contenedor_input>
 
-                <div class="grid grid-cols-3 gap-4">
+                <div class="row d-flex">
                     <x-contenedor_input>
                         <x-jet-label class="font-semibold" for="uso" value="{{ __('Uso(*):') }}" />
                         <select name="uso" class="form-select" required>
@@ -156,7 +155,7 @@
                     </div>
                 </x-contenedor_input>
 
-                <div class="grid grid-cols-3 gap-4">
+                <div class="row d-flex">
                     <x-contenedor_input>
                         <x-jet-label class="font-semibold" for="nombres" value="{{ __('Nombres y apellidos(*):') }}" />
                         <x-jet-input id="nombres" name="nombres" type="text" :value="old('nombres')" class="form-control" required placeholder="" value="" />
@@ -207,8 +206,14 @@
                 <br>
                 <br>
                 <div class="form-group d-flex justify-content-between px-4 py-4">
-                    <button type="submit" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Enviar</button>
-                    <a href="{{ route('dashboard') }}"><button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Regresar</button></a>
+                    <x-button type="submit" color="green">
+                        Enviar
+                    </x-button>
+                    <a href="{{ route('dashboard') }}">
+                        <x-button type="button" color="red">
+                            Regresar
+                        </x-button>
+                    </a>
                 </div>
             </form>
         </div>
