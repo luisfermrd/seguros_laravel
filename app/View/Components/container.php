@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class form_vehiculo extends Component
+class container extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class form_vehiculo extends Component
      */
     public function render()
     {
-        return view('components.form_vehiculo');
+        return view('components.container');
     }
 }
